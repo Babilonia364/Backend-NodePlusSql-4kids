@@ -9,6 +9,7 @@
   "dependencies": {
     "consign": "^0.1.6",
     "express.js": "^1.0.0",
-    "nodemon": "^2.0.13"
+    "nodemon": "^2.0.13",
+    "pg": "^8.7.1"
   }
 }
