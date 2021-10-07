@@ -11,6 +11,8 @@ class Tables {
       client varchar(50) NOT NULL,
       pet varchar(20),
       service varchar(20),
+      date timestamp NOT NULL,
+      date_created timestamp NOT NULL,
       status varchar(20) NOT NULL,
       observations text,
       PRIMARY KEY(id)
