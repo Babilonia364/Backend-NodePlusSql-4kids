@@ -3,6 +3,7 @@ class Tables {
     this.connection = connection;
 
     this.createServices();
+    this.createPets();
   }
 
   createServices() {
@@ -26,6 +27,23 @@ class Tables {
         console.log("Services table sucessfully created");
       }
     })
+  };
+
+  createPets() {
+    const query = `CREATE TABLE IF NOT EXISTS Pets (
+      id SERIAL NOT NULL,
+      name varchar(50) NOT NULL,
+      image varchar(200) NOT NULL,
+      PRIMARY KEY(id)
+    );`
+
+    this.connection.query(query, error => {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log("Pet table sucessfully created");
+      }
+    });
   };
 };
 
